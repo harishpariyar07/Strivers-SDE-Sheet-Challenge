@@ -36,19 +36,14 @@ Node<int> *sortTwoLists(Node<int> *first, Node<int> *second)
         res = res->next;
     }
 
-    while (first)
-    {
+    if (first)
         res->next = first;
-        res = res->next;
-        first = first->next;
-    }
 
-    while (second)
-    {
+    if (second)
         res->next = second;
-        res = res->next;
-        second = second->next;
-    }
 
     return temp;
 }
+
+// Optimized approach
+// Without creating new linkedlist
